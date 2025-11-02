@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Por que o Estudix? | Dados que Justificam</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { background: #f8f9fa; font-family: 'Segoe UI', sans-serif; }
+    .hero { background: linear-gradient(135deg, #1e3a8a, #3b82f6); color: white; padding: 4rem 0; }
+    .stat-card { background: white; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); padding: 2rem; text-align: center; transition: transform 0.3s; }
+    .stat-card:hover { transform: translateY(-10px); }
+    .icon { font-size: 3rem; color: #3b82f6; margin-bottom: 1rem; }
+    .chart-container { background: white; border-radius: 15px; padding: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+    footer { background: #1e3a8a; color: white; padding: 2rem 0; margin-top: 3rem; }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <section class="hero text-center">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Por que o <span class="text-warning">Estudix</span>?</h1>
+      <p class="lead">Dados reais que mostram a necessidade de um AVA simples e acessível</p>
+    </div>
+  </section>
+
+  <div class="container my-5">
+
+    <!-- Estatísticas Rápidas -->
+    <div class="row g-4 mb-5">
+      <div class="col-md-4">
+        <div class="stat-card">
+          <div class="icon"><i class="fas fa-school"></i></div>
+          <h3>70%</h3>
+          <p>das escolas públicas <strong>não têm AVA</strong></p>
+          <small>Fonte: Agência Brasil, 2020</small>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="stat-card">
+          <div class="icon"><i class="fas fa-laptop"></i></div>
+          <h3>62%</h3>
+          <p>dos jovens pobres <strong>não têm computador</strong></p>
+          <small>Fonte: IMDS, 2023</small>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="stat-card">
+          <div class="icon"><i class="fas fa-wifi"></i></div>
+          <h3>&lt;30%</h3>
+          <p>das áreas rurais têm <strong>internet banda larga</strong></p>
+          <small>Fonte: CNTE, 2023</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gráfico -->
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <div class="chart-container">
+          <h4 class="text-center mb-4">Acesso à Tecnologia por Região</h4>
+          <canvas id="acessoChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabela Detalhada -->
+    <div class="mt-5">
+      <h3 class="text-center mb-4">Tabela de Impacto: "A cada X, temos Y"</h3>
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+          <thead class="table-primary">
+            <tr>
+              <th>A cada...</th>
+              <th>Temos...</th>
+              <th>Implicação para o Estudix</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>10 escolas públicas</td>
+              <td><strong>7 sem AVA</strong></td>
+              <td>Precisamos de uma solução leve e local</td>
+            </tr>
+            <tr>
+              <td>100 jovens de baixa renda</td>
+              <td><strong>62 sem computador</strong></td>
+              <td>O sistema deve rodar em celular ou máquina compartilhada</td>
+            </tr>
+            <tr>
+              <td>100 alunos do interior</td>
+              <td><strong>70 sem internet em casa</strong></td>
+              <td>Funcionar offline ou com baixa conectividade</td>
+            </tr>
+            <tr>
+              <td>1 professor com 30 alunos</td>
+              <td><strong>21 entregas manuais</strong></td>
+              <td>O banco de dados automatiza controle de tarefas</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-muted text-center mt-3"><small>Fonte: Elaborado pelos autores com base em Agência Brasil (2020), IMDS (2023), CNTE (2023)</small></p>
+    </div>
+
+    <!-- Conclusão -->
+    <div class="alert alert-success mt-5 text-center">
+      <h4>Por isso criamos o Estudix:</h4>
+      <p class="mb-0"><strong>Um AVA simples, gratuito e que funciona onde os outros não chegam.</strong></p>
+    </div>
+
+  </div>
+
+  <!-- Gráfico com Chart.js -->
+  <script>
+    const ctx = document.getElementById('acessoChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Escolas com AVA', 'Sem AVA', 'Jovens com PC', 'Sem PC', 'Internet Rural', 'Sem Internet'],
+        datasets: [{
+          label: 'Percentual (%)',
+          data: [30, 70, 38, 62, 30, 70],
+          backgroundColor: ['#10b981', '#ef4444', '#10b981', '#ef4444', '#10b981', '#ef4444']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: { y: { beginAtZero: true, max: 100 } }
+      }
+    });
+  </script>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <p>Projeto Estudix © 2025 | Igor, Gustavo e Matheus | UNASP Hortolândia</p>
+  </footer>
+
+</body>
+</html>
