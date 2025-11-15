@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Por que o Estudix? | Dados que Justificam</title>
+  <meta name="description" content="Dados atualizados sobre conectividade educacional no Brasil, justificando o AVA simples do Estudix para escolas com infraestrutura limitada.">
+  <meta name="keywords" content="Estudix, AVA, educação digital, conectividade escolas Brasil, inclusão digital">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    body { background: #f8f9fa; font-family: 'Segoe UI', sans-serif; }
+    .hero { background: linear-gradient(135deg, #1e3a8a, #3b82f6); color: white; padding: 4rem 0; }
+    .stat-card {
+      background: white; border-radius: 15px; padding: 2rem; text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;
+    }
+    .stat-card:hover { transform: translateY(-10px); }
+    .icon { font-size: 3rem; color: #3b82f6; margin-bottom: 1rem; }
+    .chart-container {
+      position: relative; background: white; padding: 2rem;
+      border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      height: 400px; /* Otimizado para mobile */
+    }
+    .painel { display: none; }
+    .painel.ativo { display: block; }
+    .references { background: #e9ecef; padding: 1rem; border-radius: 10px; margin-top: 2rem; }
+    footer { background: #1e3a8a; color: white; padding: 2rem 0; }
+    .nav-tabs .nav-link { border-radius: 10px 10px 0 0; }
+  </style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero text-center">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Por que o <span class="text-warning">Estudix</span>?</h1>
+    <p class="lead">Dados reais e atualizados (2025) que mostram a necessidade de um AVA simples e acessível, apesar dos avanços pós-pandemia.</p>
+  </div>
+</section>
+
+<div class="container my-5">
+
+  <!-- NAV -->
+  <div class="nav-buttons text-center mb-4">
+    <button class="btn btn-primary me-2" onclick="showPanel('projeto')" aria-label="Abrir painel Projeto e Objetivos">Projeto e Objetivos</button>
+    <button class="btn btn-primary me-2" onclick="showPanel('funcoes')" aria-label="Abrir painel Funcionalidade e Público-Alvo">Funcionalidade e Público-Alvo</button>
+    <button class="btn btn-primary" onclick="showPanel('estatistica')" aria-label="Abrir painel Elementos Estatísticos">Elementos Estatísticos</button>
+  </div>
+
+  <!-- PAINEL 1 -->
+  <div id="projeto" class="painel">
+    <h2 class="text-center mb-4">Descrição do Projeto e Objetivos</h2>
+    <p>O Estudix é um banco de dados relacional para um AVA simples, criado para escolas públicas com infraestrutura limitada.</p>
+
+    <h4>Objetivo Geral:</h4>
+    <p>Desenhar e implementar um AVA leve e acessível.</p>
+
+    <h4>Objetivos Específicos:</h4>
+    <ul>
+      <li>Definir tabelas para alunos e professores.</li>
+      <li>Garantir integridade via chaves estrangeiras.</li>
+      <li>Promover eficiência e escalabilidade.</li>
+    </ul>
+
+    <div class="text-center mt-4">
+      <a href="https://github.com/IgorLeiteViana/Projeto-Intregador-/tree/main" target="_blank" class="btn btn-outline-primary">Acessar GitHub</a>
+    </div>
+  </div>
+
+  <!-- PAINEL 2 -->
+  <div id="funcoes" class="painel">
+    <h2 class="text-center mb-4">Funcionalidade e Público-Alvo</h2>
+    <p>O sistema permite cadastro, vínculo a disciplinas, postagem de conteúdos e controle de entregas.</p>
+
+    <h4>Público-Alvo:</h4>
+    <p>Escolas públicas rurais e urbanas com pouca infraestrutura digital.</p>
+  </div>
+
+  <!-- PAINEL 3 (ATIVO POR PADRÃO) -->
+  <div id="estatistica" class="painel ativo">
+    <h2 class="text-center mb-4">📊 Elementos Estatísticos</h2>
+    <hr>
+
+    <!-- Destaques -->
+    <div class="row g-4 mb-5">
+      <div class="col-md-4">
+        <div class="stat-card">
+          <div class="icon"><i class="fas fa-school" aria-hidden="true"></i></div>
+          <h3>34,6%</h3>
+          <p>das escolas públicas sem conectividade pedagógica adequada</p>
+          <small>Fonte: MEC (2025)<grok-card data-id="305457" data-type="citation_card"></grok-card></small>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="stat-card">
+          <div class="icon"><i class="fas fa-laptop" aria-hidden="true"></i></div>
+          <h3>~11%</h3>
+          <p>dos jovens (10+ anos) sem acesso à internet (maior em baixa renda)</p>
+          <small>Fonte: PNAD/IBGE (2024)<grok-card data-id="8cf774" data-type="citation_card"></grok-card></small>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="stat-card">
+          <div class="icon"><i class="fas fa-wifi" aria-hidden="true"></i></div>
+          <h3>15,2%</h3>
+          <p>dos domicílios rurais sem internet</p>
+          <small>Fonte: MCom/PNAD (2025)<grok-card data-id="4cf1d6" data-type="citation_card"></grok-card></small>
+        </div>
+      </div>
+    </div>
+
+    <!-- TABS (ARIA para acessibilidade) -->
+    <ul class="nav nav-tabs justify-content-center" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab1" role="tab">📊 Análise dos Desafios</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab2" role="tab">🌎 Acesso Regional</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab3" role="tab">💡 Impacto no Estudix</button>
+      </li>
+    </ul>
+
+    <!-- TAB CONTENT -->
+    <div class="tab-content border border-top-0 p-3">
+
+      <!-- TAB 1 -->
+      <div class="tab-pane fade show active" id="tab1" role="tabpanel">
+        <div class="chart-container mt-4">
+          <h4 class="text-center mb-4">Acesso x Falta de Acesso (2025)</h4>
+          <canvas id="acessoChart"></canvas>
+        </div>
+      </div>
+
+      <!-- TAB 2 -->
+      <div class="tab-pane fade" id="tab2" role="tabpanel">
+        <div class="chart-container mt-4">
+          <h4 class="text-center mb-4">Penetração de Internet por Região (TIC 2024)</h4>
+          <canvas id="regiaoChart"></canvas>
+        </div>
+      </div>
+
+      <!-- TAB 3 -->
+      <div class="tab-pane fade" id="tab3" role="tabpanel">
+        <h3 class="text-center mb-4">Problema ➜ Solução</h3>
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover">
+            <thead class="table-primary">
+              <tr>
+                <th>Contexto</th>
+                <th>Problema</th>
+                <th class="bg-info text-white">Implicação para Estudix</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Escolas públicas</td><td>34,6% sem conectividade adequada</td><td>AVA leve e local</td></tr>
+              <tr><td>Jovens pobres</td><td>11% sem internet (45% por desconhecimento)</td><td>Rodar em celular + tutoriais simples</td></tr>
+              <tr><td>Áreas rurais</td><td>15,2% sem internet</td><td>Funcionar offline</td></tr>
+              <tr><td>Professor/Aluno</td><td>Média 30+ alunos/PC em rurais</td><td>Automatizar tarefas e entregas</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- REFERÊNCIAS -->
+  <div class="references mt-5">
+    <h3>Referências</h3>
+    <ul>
+      <li><a href="https://www.gov.br/mec/pt-br/assuntos/noticias/2025/setembro/mais-de-65-das-escolas-publicas-tem-conectividade-adequada" target="_blank">MEC (2025) — Conectividade nas escolas</a><grok-card data-id="0a45c4" data-type="citation_card"></grok-card></li>
+      <li><a href="https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2025-07/pesquisa-identifica-205-milhoes-de-brasileiros-sem-acesso-internet" target="_blank">PNAD Contínua (2024) — Internet nos domicílios (IBGE)</a><grok-card data-id="369317" data-type="citation_card"></grok-card></li>
+      <li><a href="https://www.gov.br/mcom/pt-br/noticias/2025/Julho/acesso-a-internet-nas-areas-rurais-dispara-150-em-oito-anos-e-alcanca-84-8-da-populacao" target="_blank">MCOM (2025) — Internet rural (PNAD)</a><grok-card data-id="2566ea" data-type="citation_card"></grok-card></li>
+      <li><a href="https://nic.br/noticia/na-midia/tic-educacao-2024-96-das-escolas-brasileiras-estao-conectadas/" target="_blank">TIC Educação (2024) — Acesso por região</a><grok-card data-id="42570b" data-type="citation_card"></grok-card></li>
+      <li>IMDS (2021) — Jovens excluídos digitalmente (dados complementares)</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="text-center">
+  <p>Projeto Estudix © 2025 | Igor, Gustavo e Matheus | UNASP Hortolândia</p>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+function showPanel(id) {
+  document.querySelectorAll('.painel').forEach(p => p.classList.remove('ativo'));
+  document.getElementById(id).classList.add('ativo');
+  // Re-render charts if needed (lazy load)
+  if (id === 'estatistica') {
+    renderCharts();
+  }
+}
+
+// Função para renderizar charts (chamada inicial e on-demand)
+function renderCharts() {
+  // Chart 1: Acesso x Falta
+  new Chart(document.getElementById('acessoChart'), {
+    type: 'bar',
+    data: {
+      labels: ['Escolas Públicas', 'Jovens (10+)', 'Domicílios Rurais'],
+      datasets: [
+        { label: 'Com Acesso (%)', data: [65.4, 89, 84.8], backgroundColor: '#6cb5f5' },
+        { label: 'Sem Acesso (%)', data: [34.6, 11, 15.2], backgroundColor: '#f28c8c' }
+      ]
+    },
+    options: { 
+      responsive: true, 
+      maintainAspectRatio: false, 
+      scales: { y: { beginAtZero: true, max: 100 } },
+      plugins: { tooltip: { callbacks: { label: function(context) { return context.dataset.label + ': ' + context.parsed.y + '%'; } } } }
+    }
+  });
+
+  // Chart 2: Regiões
+  new Chart(document.getElementById('regiaoChart'), {
+    type: 'bar',
+    data: {
+      labels: ['Norte', 'Nordeste', 'Sudeste', 'Sul', 'Centro-Oeste'],
+      datasets: [
+        { label: 'Acesso à Internet nas Escolas (%)', data: [78, 80, 93, 91, 90], backgroundColor: '#6cb5f5' }
+      ]
+    },
+    options: { 
+      responsive: true, 
+      maintainAspectRatio: false, 
+      scales: { y: { beginAtZero: true, max: 100 } },
+      plugins: { tooltip: { callbacks: { label: function(context) { return context.dataset.label + ': ' + context.parsed.y + '%'; } } } }
+    }
+  });
+}
+
+// Render inicial
+document.addEventListener('DOMContentLoaded', function() {
+  showPanel('estatistica'); // Ativa por padrão
+  renderCharts();
+});
+</script>
+
+</body>
+</html>
