@@ -31,8 +31,16 @@
     .painel { display: none; }
     .painel.ativo { display: block; }
     .references { background: #e9ecef; padding: 1rem; border-radius: 10px; margin-top: 2rem; }
-    footer { background: #1e3a8a; color: white; padding: 2rem 0; }
+    footer { background: #1e3a8a; 
+  color: white;
+  padding: 2rem 0; 
+  margin-top: 3rem; }
+  .footer-link:hover {
+  color: #fff !important; /* Branco no hover */
+  text-decoration: underline !important;
+}
     .nav-tabs .nav-link { border-radius: 10px 10px 0 0; }
+    
   </style>
 </head>
 
@@ -70,9 +78,7 @@
       <li>Promover eficiência e escalabilidade.</li>
     </ul>
 
-    <div class="text-center mt-4">
-      <a href="https://github.com/IgorLeiteViana/Projeto-Intregador-/tree/main" target="_blank" class="btn btn-outline-primary">Acessar GitHub</a>
-    </div>
+    
   </div>
 
   <!-- PAINEL 2 -->
@@ -86,7 +92,7 @@
 
   <!-- PAINEL 3 (ATIVO POR PADRÃO) -->
   <div id="estatistica" class="painel ativo">
-    <h2 class="text-center mb-4">📊 Elementos Estatísticos</h2>
+    <h2 class="text-center mb-4"> Elementos Estatísticos</h2>
     <hr>
 
     <!-- Destaques -->
@@ -96,7 +102,7 @@
           <div class="icon"><i class="fas fa-school" aria-hidden="true"></i></div>
           <h3>34,6%</h3>
           <p>das escolas públicas sem conectividade pedagógica adequada</p>
-          <small>Fonte: MEC (2025)<grok-card data-id="305457" data-type="citation_card"></grok-card></small>
+          <small>Fonte: MEC </small>
         </div>
       </div>
 
@@ -105,7 +111,7 @@
           <div class="icon"><i class="fas fa-laptop" aria-hidden="true"></i></div>
           <h3>~11%</h3>
           <p>dos jovens (10+ anos) sem acesso à internet (maior em baixa renda)</p>
-          <small>Fonte: PNAD/IBGE (2024)<grok-card data-id="8cf774" data-type="citation_card"></grok-card></small>
+          <small>Fonte: PNAD/IBGE</small>
         </div>
       </div>
 
@@ -114,7 +120,7 @@
           <div class="icon"><i class="fas fa-wifi" aria-hidden="true"></i></div>
           <h3>15,2%</h3>
           <p>dos domicílios rurais sem internet</p>
-          <small>Fonte: MCom/PNAD (2025)<grok-card data-id="4cf1d6" data-type="citation_card"></grok-card></small>
+          <small>Fonte: MCom/PNAD (2025)</small>
         </div>
       </div>
     </div>
@@ -122,13 +128,13 @@
     <!-- TABS (ARIA para acessibilidade) -->
     <ul class="nav nav-tabs justify-content-center" role="tablist">
       <li class="nav-item" role="presentation">
-        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab1" role="tab">📊 Análise dos Desafios</button>
+        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab1" role="tab"> Análise dos Desafios</button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab2" role="tab">🌎 Acesso Regional</button>
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab2" role="tab"> Acesso Regional</button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab3" role="tab">💡 Impacto no Estudix</button>
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab3" role="tab"> Impacto no Estudix</button>
       </li>
     </ul>
 
@@ -180,21 +186,38 @@
   <div class="references mt-5">
     <h3>Referências</h3>
     <ul>
-      <li><a href="https://www.gov.br/mec/pt-br/assuntos/noticias/2025/setembro/mais-de-65-das-escolas-publicas-tem-conectividade-adequada" target="_blank">MEC (2025) — Conectividade nas escolas</a><grok-card data-id="0a45c4" data-type="citation_card"></grok-card></li>
-      <li><a href="https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2025-07/pesquisa-identifica-205-milhoes-de-brasileiros-sem-acesso-internet" target="_blank">PNAD Contínua (2024) — Internet nos domicílios (IBGE)</a><grok-card data-id="369317" data-type="citation_card"></grok-card></li>
-      <li><a href="https://www.gov.br/mcom/pt-br/noticias/2025/Julho/acesso-a-internet-nas-areas-rurais-dispara-150-em-oito-anos-e-alcanca-84-8-da-populacao" target="_blank">MCOM (2025) — Internet rural (PNAD)</a><grok-card data-id="2566ea" data-type="citation_card"></grok-card></li>
-      <li><a href="https://nic.br/noticia/na-midia/tic-educacao-2024-96-das-escolas-brasileiras-estao-conectadas/" target="_blank">TIC Educação (2024) — Acesso por região</a><grok-card data-id="42570b" data-type="citation_card"></grok-card></li>
-      <li>IMDS (2021) — Jovens excluídos digitalmente (dados complementares)</li>
+      <li><a href="https://www.gov.br/mec/pt-br/assuntos/noticias/2025/setembro/mais-de-65-das-escolas-publicas-tem-conectividade-adequada" target="_blank">MEC — Conectividade nas escolas</a></li>
+      <li><a href="https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2025-07/pesquisa-identifica-205-milhoes-de-brasileiros-sem-acesso-internet" target="_blank">PNAD Contínua — Internet nos domicílios (IBGE)</a></li>
+      <li><a href="https://www.gov.br/mcom/pt-br/noticias/2025/Julho/acesso-a-internet-nas-areas-rurais-dispara-150-em-oito-anos-e-alcanca-84-8-da-populacao" target="_blank">MCOM — Internet rural (PNAD)</a></li>
+      <li><a href="https://nic.br/noticia/na-midia/tic-educacao-2024-96-das-escolas-brasileiras-estao-conectadas/" target="_blank">TIC Educação — Acesso por região</a></li>
+      <li><a href="https://imdsbrasil.org/em_pauta/sem-computador-e-internet-jovens-mais-pobres-tem-menos-oportunidades/" target="_blank">IMDS  — Jovens excluídos digitalmente</li>
     </ul>
   </div>
 
 </div>
-
-<!-- FOOTER -->
-<footer class="text-center">
-  <p>Projeto Estudix © 2025 | Igor, Gustavo e Matheus | UNASP Hortolândia</p>
+<footer class="footer bg-dark text-white pt-4 pb-3">
+  <div class="container text-center">
+    <div class="mb-3">
+      <a href="https://github.com/IgorLeiteViana/Projeto-Intregador-/tree/main" 
+         target="_blank" 
+         class="text-warning text-decoration-none mx-3 footer-link" 
+         aria-label="Acessar o Repositório do Estudix no GitHub">
+        <i class="fab fa-github fa-lg me-2"></i> Repositório GitHub
+      </a>
+      |
+      <a href="#projeto" class="text-white text-decoration-none mx-3 footer-link">
+        <i class="fas fa-bullseye me-1"></i> Sobre o Projeto
+      </a>
+    </div>
+    
+    <p class="mb-1">
+      Projeto Estudix © 2025 | Igor, Gustavo e Matheus | UNASP Hortolândia
+    </p>
+    <p class="small text-muted mb-0">
+      Desenvolvido como Projeto Integrador
+    </p>
+  </div>
 </footer>
-
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
